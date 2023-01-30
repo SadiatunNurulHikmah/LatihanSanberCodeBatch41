@@ -1,3 +1,7 @@
+const prompt = require('prompt-sync')({sigint: true});
+
+console.log("welcome");
+
 module.export = function TotalQuantity(data){
     for(let i=0; i<data.quantity.length; i++){
         let ProductCode = data.productCode;
@@ -9,4 +13,3 @@ module.export = function TotalQuantity(data){
 
 TotalQuantity(response);
 console.log(response.data);
-console.log("welcome");
