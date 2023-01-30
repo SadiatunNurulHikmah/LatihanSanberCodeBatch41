@@ -6,10 +6,10 @@ var ulangi = true;
 
 while(ulangi){
     console.log("Perhitungan ke-"+counter)
-    var inputAngka = prompt("Masukkan Angka Genap : ");
+    var inputAngka = prompt("Masukkan Bilangan Genap : ");
     let angka = parseFloat(inputAngka);
 
-    if(!isNaN(angka)){
+    if(!isNaN(angka) && Number.isInteger(angka)){
         const hasil = Math.sqrt(angka);
         if (angka % 2 == 0) {
             console.log(`Akar Pangkat Dua dari ${inputAngka} adalah ${hasil}`);
@@ -18,8 +18,10 @@ while(ulangi){
         } else if (angka % 2 != 0) {
             console.log('Tidak bisa input bilangan ganjil');
         }
+    } else if (!isNaN(angka)) {
+        console.log("Tidak bisa input bilangan desimal");
     } else {
-        console.log("NaN");
+        console.log("Nan");
     }
    
     
