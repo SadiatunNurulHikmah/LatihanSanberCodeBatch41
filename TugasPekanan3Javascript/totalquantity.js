@@ -9,3 +9,4 @@ module.export = function TotalQuantity(data){
 
 TotalQuantity(response);
 console.log(response.data);
+console.log("welcome");
