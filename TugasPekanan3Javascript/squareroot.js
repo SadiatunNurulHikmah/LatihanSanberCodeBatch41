@@ -7,16 +7,18 @@ var ulangi = true;
 while(ulangi){
     console.log("Perhitungan ke-"+counter)
     var inputAngka = prompt("Masukkan Bilangan Genap : ");
-    let angka = parseFloat(inputAngka);
+    
+    let numObj = new Number(inputAngka);
+    const angka = numObj.valueOf();
 
     if(!isNaN(angka) && Number.isInteger(angka)){
         const hasil = Math.sqrt(angka);
-        if (angka % 2 == 0) {
+        if (angka % 2 == 0 && angka >= 0) {
             console.log(`Akar Pangkat Dua dari ${inputAngka} adalah ${hasil}`);
-        } else if (angka < 0) {
-            console.log('Tidak bisa input bilangan negatif');
-        } else if (angka % 2 != 0) {
+        } else if (angka % 2 != 0 && angka > 0) {
             console.log('Tidak bisa input bilangan ganjil');
+        } else {
+            console.log('Tidak bisa input bilangan negatif');
         }
     } else if (!isNaN(angka)) {
         console.log("Tidak bisa input bilangan desimal");
