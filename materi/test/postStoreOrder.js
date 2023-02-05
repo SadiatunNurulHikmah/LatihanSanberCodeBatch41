@@ -2,18 +2,12 @@
 
 const { expect } = require('chai');
 const request = require('supertest');
+const data = require('../data/userData.js');
+const testData = data.CREATE_USER_DATA_1;
 
 const baseUrl = 'https://restful-booker.herokuapp.com';
 const baseUrl2 = 'https://petstore.swagger.io/v2';
 
-const testData = {
-    "id": 0,
-    "petId": 0,
-    "quantity": 0,
-    "shipDate": "2023-02-04T13:55:07.134Z",
-    "status": "placed",
-    "complete": true
-  };
 
 describe('Place an order for a pet', function(){
     const response = request(baseUrl2) //baseUrl
