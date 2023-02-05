@@ -15,3 +15,7 @@ npm install <package-name> --global
 npm update
 --Mengupdate npm ke versi terbaru:
 npm install npm@latest -g
+
+
+cypress
+how to run -> npx cypress open
