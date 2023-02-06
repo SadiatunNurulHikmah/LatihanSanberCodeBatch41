@@ -1,5 +1,5 @@
 const request = require('supertest');
-const response = require('../../TugasPekanan3Javascript/datatotalquantity');
+//const response = require('../../TugasPekanan3Javascript/datatotalquantity');
 
 const baseUrl3 = 'http://restapi.adequateshop.com';
 

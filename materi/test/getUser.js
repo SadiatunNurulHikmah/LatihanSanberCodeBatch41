@@ -20,6 +20,7 @@ describe('Get Users', async() =>{
     const response = request('http://restapi.adequateshop.com') //baseUrl
     .get('/api/users?page=1') //endpoint
     .set({'Authorization' : token})
+    
 
     console.log((await response).body)
     it('response status is 200', async () =>{
